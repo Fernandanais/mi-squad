@@ -41,7 +41,10 @@ function MiembroSquad( foto, nombre, edad, hobbies, comentario ){
   this.nombre = nombre;
   this.edad = edad;
   this.hobbies = hobbies;
-  this.comentario = comentario;
+  function comentar() {
+    var coment = document.getElementById("myTextarea").value;
+    document.getElementById("demo").innerHTML = coment;
+}
  
 }
 var squad = [
@@ -52,7 +55,7 @@ var squad = [
                 new MiembroSquad("<img src='img/vanne.jpg'>","Vanessa García", "25", ["Aprender de agilidad", "Probar cervezas", "Escuchar música"]),
                 new MiembroSquad("<img src='img/vale.jpg'>","Valentina Miranda", "26", ["Dibujar","ver anime y series", "Cocinar"]),
                 new MiembroSquad("<img src='img/cindy.jpg'>","Cindialy Berrios", "23", ["Trekking","Escuchar música", "Deporte"]),
-                new MiembroSquad("<img src='img/espe.jpg'>","Esperanza Lucero", "25", ["Fotografía", "Leer", "Dormir"], '<textarea id="myTextarea">"<p>Escribe tu comentario...</p>"</textarea><br><button type="button" onclick="myFunction()">Publicar</button>')
+                new MiembroSquad("<img src='img/espe.jpg'>","Esperanza Lucero", "25", ["Fotografía", "Leer", "Dormir"], "demo")
                 ];
 
 
@@ -61,7 +64,7 @@ var squad = [
 squad.forEach(function(miembroSquad) {
   var integrante = miembroSquad.foto + '<br><strong>Nombre: </strong>' + miembroSquad.nombre +
   			 '<br/><strong>Edad: </strong>' + miembroSquad.edad +
-            '<br/><strong>Hobbies: </strong><ul>' + this.comentario;
+            '<br/><strong>Hobbies: </strong><ul>';
 
  miembroSquad.hobbies.forEach(function(hobby){
     integrante += '<li>' + hobby + '</li>';
