@@ -1,0 +1,22 @@
+body{
+	font-family: Arial;
+	background-image: url("../img/fondo.png");
+	color:  #8A2BE2;
+
+
+}
+
+h2{
+	color: #FFF;
+}
+
+img{
+	height: 150px;
+	border-style: solid;
+	border-color: #FF1493;
+	margin: 10px 25px 10px 20px;
+	float: left;
+	
+	
+}
+
